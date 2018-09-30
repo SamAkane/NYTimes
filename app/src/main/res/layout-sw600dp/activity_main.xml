@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/about_4"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_50_dp"
+                android:layout_marginEnd="@dimen/margin_50_dp"
+                android:layout_marginLeft="@dimen/margin_50_dp"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:layout_marginTop="@dimen/margins_8_dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/image_height"
+                    android:layout_gravity="center"
+                    android:src="@drawable/bug"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/position"
+                    android:layout_margin="@dimen/margins_8_dp"
+                    android:textSize="@dimen/text_size"
+                    tools:ignore="SpUsage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_50_dp"
+                android:layout_marginEnd="@dimen/margin_50_dp"
+                android:layout_marginLeft="@dimen/margin_50_dp"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:layout_marginBottom="@dimen/margins_8_dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/image_height"
+                    android:layout_gravity="center"
+                    android:src="@drawable/gamepad_variant"/>
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hobby"
+                    android:layout_margin="@dimen/margins_8_dp"
+                    android:textSize="@dimen/text_size"
+                    tools:ignore="SpUsage" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_2dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginLeft="@dimen/margin_50_dp"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:background="@color/line"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_50_dp"
+                android:layout_marginEnd="@dimen/margin_50_dp"
+                android:layout_marginLeft="@dimen/margin_50_dp"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:layout_marginTop="@dimen/margins_16_dp"
+                android:layout_marginBottom="@dimen/margins_16_dp"
+                android:text="@string/description"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_3dp"
+                android:layout_marginStart="@dimen/margin_50_dp"
+                android:layout_marginEnd="@dimen/margin_50_dp"
+                android:layout_marginLeft="@dimen/margin_50_dp"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:background="@color/line"
+                />
+
+            <EditText
+                android:id="@+id/message"
+                android:layout_marginStart="@dimen/margin_50_dp"
+                android:layout_marginEnd="@dimen/margin_50_dp"
+                android:layout_marginLeft="@dimen/margin_50_dp"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:layout_marginTop="@dimen/margins_16_dp"
+                android:layout_marginBottom="@dimen/margins_16_dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_a_message"/>
+
+            <TextView
+                android:id="@+id/send_message_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_50_dp"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:layout_marginBottom="@dimen/margins_8_dp"
+                android:text="@string/send_message"
+                android:layout_gravity="right"
+                android:textColor="@color/line"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <ImageView
+                    android:id="@+id/instagramm_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/image_height"
+                    android:layout_margin="@dimen/margins_8_dp"
+                    android:src="@drawable/instagram"
+                    />
+                <ImageView
+                    android:id="@+id/telegram_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/image_height"
+                    android:layout_margin="@dimen/margins_8_dp"
+                    android:src="@drawable/telegram"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

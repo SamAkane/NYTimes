@@ -1,4 +1,4 @@
-package com.example.tumnova.nytymes;
+package com.example.tumnova.nytimes;
 
 import org.junit.Test;
 

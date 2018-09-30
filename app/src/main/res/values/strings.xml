@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">NY Tymes</string>
+    <string name="position">QA engineer</string>
+    <string name="hobby">Video game</string>
+    <string name="description">Hi! My name is Tanya!\nI have been doing Android since summer this year.\nI am working as a QA engineer in A1 Systems company.</string>
+    <string name="enter_a_message">Enter a message</string>
+    <string name="send_message">Send message</string>
+    <string name="app_name">NY Times</string>
+    <string name="my_name">Tanya Umnova</string>
+    <string name="email_address">s.akane@yandex.ru</string>
+    <string name="email_theme">Feedback</string>
+    <string name="no_email_apps">Sorry, no email apps on your device</string>
+    <string name="telegram_no_installed">Sorry, telegram not installed on your device</string>
+    <string name="disclaimer">© 2018 Tanya Umnova</string>
 </resources>

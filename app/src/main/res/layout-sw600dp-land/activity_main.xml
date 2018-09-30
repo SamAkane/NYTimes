@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/about_3"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linear_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="center"
-            android:src="@drawable/about_3"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -104,8 +112,8 @@
             android:layout_marginEnd="@dimen/margin_50_dp"
             android:layout_marginLeft="@dimen/margin_50_dp"
             android:layout_marginRight="@dimen/margin_50_dp"
-            android:layout_marginTop="@dimen/margins_16_dp"
-            android:layout_marginBottom="@dimen/margins_16_dp"
+            android:layout_marginTop="@dimen/margins_8_dp"
+            android:layout_marginBottom="@dimen/margins_8_dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_a_message"/>
@@ -116,15 +124,17 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_50_dp"
             android:layout_marginRight="@dimen/margin_50_dp"
+            android:layout_marginTop="@dimen/margins_8_dp"
             android:layout_marginBottom="@dimen/margins_8_dp"
             android:text="@string/send_message"
             android:layout_gravity="right"
             android:textColor="@color/line"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center|bottom">
             <ImageView
                 android:id="@+id/instagramm_icon"
                 android:layout_width="wrap_content"
@@ -143,4 +153,5 @@
 
     </LinearLayout>
 
-</ScrollView>
+
+</LinearLayout>
