@@ -62,14 +62,17 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_EMAIL, new String[]{getString(R.string.email_address)});
         intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_theme));
         intent.putExtra(Intent.EXTRA_TEXT, message);
-        if(intent.resolveActivity(getPackageManager()) != null) startActivity(intent);
-        else Toast.makeText(this, R.string.no_email_apps, Toast.LENGTH_SHORT).show();
+        if(intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, R.string.no_email_apps, Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void goToInstagramm() {
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        String instagram_link = "https://www.instagram.com";
-        intent.setData(Uri.parse(instagram_link));
+        String instagramLink = "https://www.instagram.com";
+        intent.setData(Uri.parse(instagramLink));
         startActivity(intent);
     }
 
@@ -77,9 +80,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.setPackage("com.telegram");
-        if(intent != null) {
+        if(intent.resolveActivity(getPackageManager()) != null) {
             startActivity(Intent.createChooser(intent, "Share with"));
-        } else Toast.makeText(this, R.string.telegram_no_installed, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, R.string.telegram_no_installed, Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void createDisclaimer() {

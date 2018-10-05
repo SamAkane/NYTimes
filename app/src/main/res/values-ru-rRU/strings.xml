@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NY Times</string>
+    <string name="position">Инженер по тестированию</string>
+    <string name="hobby">Видео-игры</string>
+    <string name="description">Привет! Меня зовут Таня!\nЯ занимаюсь android с конца этого этого лета.\nЯ работаю инженером по тестированию в компании A1 Systems.</string>
+    <string name="enter_a_message">Введите сообщение</string>
+    <string name="send_message">Отправить сообщение</string>
+    <string name="my_name">Татьяна Умнова</string>
+    <string name="email_address">s.akane@yandex.ru</string>
+    <string name="email_theme">Обратная связь</string>
+    <string name="no_email_apps">На вашем устройстве нет приложений для отправки электронных писем</string>
+    <string name="telegram_no_installed">На вашем устройстве не установлен telegramm</string>
+    <string name="disclaimer">© 2018 Татьяна Умнова</string>
+</resources>
