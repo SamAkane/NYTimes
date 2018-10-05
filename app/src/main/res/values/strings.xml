@@ -11,4 +11,5 @@
     <string name="no_email_apps">Sorry, no email apps on your device</string>
     <string name="telegram_no_installed">Sorry, telegram not installed on your device</string>
     <string name="disclaimer">© 2018 Tanya Umnova</string>
+    <string name="about">About author</string>
 </resources>
