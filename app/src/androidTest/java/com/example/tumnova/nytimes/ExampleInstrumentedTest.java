@@ -1,4 +1,4 @@
-package com.example.tumnova.nytymes;
+package com.example.tumnova.nytimes;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

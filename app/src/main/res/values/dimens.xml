@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margins_8_dp">8dp</dimen>
+    <dimen name="margins_16_dp">16dp</dimen>
+    <dimen name="margin_50_dp">50dp</dimen>
+    <dimen name="text_size">16dp</dimen>
+    <dimen name="horizontal_line_2dp">2dp</dimen>
+    <dimen name="horizontal_line_3dp">3dp</dimen>
+    <dimen name="image_height">28dp</dimen>
+</resources>
