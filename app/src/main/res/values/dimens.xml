@@ -3,8 +3,11 @@
     <dimen name="margins_8_dp">8dp</dimen>
     <dimen name="margins_16_dp">16dp</dimen>
     <dimen name="margin_50_dp">50dp</dimen>
-    <dimen name="text_size">16dp</dimen>
+    <dimen name="text_size">16sp</dimen>
     <dimen name="horizontal_line_2dp">2dp</dimen>
     <dimen name="horizontal_line_3dp">3dp</dimen>
     <dimen name="image_height">28dp</dimen>
+    <dimen name="margins_4_dp">4dp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
 </resources>
