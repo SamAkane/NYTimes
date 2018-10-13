@@ -1,18 +1,30 @@
-package com.example.tumnova.nytimes;
+package com.example.tumnova.nytimes.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.tumnova.nytimes.DataUtils;
+import com.example.tumnova.nytimes.NTAdapter;
+import com.example.tumnova.nytimes.R;
+
 public class NewsListActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_list);
+
+        init();
+
+        recyclerView.setAdapter(new NTAdapter(this, DataUtils.generateNews()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
@@ -30,5 +42,9 @@ public class NewsListActivity extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    private void init() {
+        recyclerView = findViewById(R.id.recycler_view);
     }
 }

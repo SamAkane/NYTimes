@@ -1,4 +1,4 @@
-package com.example.tumnova.nytimes;
+package com.example.tumnova.nytimes.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.tumnova.nytimes.R;
 
 public class AboutActivity extends AppCompatActivity {
 
