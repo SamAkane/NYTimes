@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.example.tumnova.nytimes.DataUtils;
 import com.example.tumnova.nytimes.NTAdapter;
+import com.example.tumnova.nytimes.NTItemDecoretor;
 import com.example.tumnova.nytimes.R;
 
 public class NewsListActivity extends AppCompatActivity {
@@ -22,9 +23,6 @@ public class NewsListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_news_list);
 
         init();
-
-        recyclerView.setAdapter(new NTAdapter(this, DataUtils.generateNews()));
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
@@ -46,5 +44,10 @@ public class NewsListActivity extends AppCompatActivity {
 
     private void init() {
         recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setAdapter(new NTAdapter(this, DataUtils.generateNews()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        NTItemDecoretor itemDecorator = new NTItemDecoretor();
+        recyclerView.addItemDecoration(itemDecorator);
     }
 }

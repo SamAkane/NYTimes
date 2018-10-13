@@ -44,7 +44,9 @@ public class NTAdapter extends RecyclerView.Adapter<NTAdapter.ViewHolder> {
         viewHolder.previewText.setText(n.getPreviewText());
         Glide.with(context).load(n.getImageUrl()).into(viewHolder.image);
         viewHolder.publicationDate.setText(n.getPublishDate().toString());
-        viewHolder.publicationDate.setText(DateUtils.getRelativeTimeSpanString(n.getPublishDate().getTime(), System.currentTimeMillis(), DateUtils.MINUTE_IN_MILLIS, DateUtils.FORMAT_ABBREV_RELATIVE));
+        viewHolder.publicationDate.setText(DateUtils.getRelativeTimeSpanString(
+                n.getPublishDate().getTime(), System.currentTimeMillis(),
+                DateUtils.MINUTE_IN_MILLIS, DateUtils.FORMAT_ABBREV_RELATIVE));
     }
 
     @Override
