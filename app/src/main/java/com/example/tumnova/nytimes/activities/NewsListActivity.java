@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -62,8 +63,11 @@ public class NewsListActivity extends AppCompatActivity {
     }
 
     private RecyclerView.LayoutManager getLayoutManager() {
+        DisplayMetrics metrics = this.getResources().getDisplayMetrics();
+        float dpWidth = metrics.widthPixels / metrics.density;
+        int noOfColumn = (int) dpWidth / 180;
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            return new GridLayoutManager(this, 2);
+            return new GridLayoutManager(this, noOfColumn);
         } else {
             return new LinearLayoutManager(this);
         }
