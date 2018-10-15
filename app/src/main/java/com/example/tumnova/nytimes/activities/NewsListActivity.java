@@ -2,6 +2,7 @@ package com.example.tumnova.nytimes.activities;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -11,6 +12,7 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 
 import com.example.tumnova.nytimes.DataUtils;
 import com.example.tumnova.nytimes.NTAdapter;
@@ -45,14 +47,6 @@ public class NewsListActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-
-        }
-    }
-
     private void init() {
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setAdapter(new NTAdapter(this, DataUtils.generateNews()));
@@ -63,10 +57,10 @@ public class NewsListActivity extends AppCompatActivity {
     }
 
     private RecyclerView.LayoutManager getLayoutManager() {
-        DisplayMetrics metrics = this.getResources().getDisplayMetrics();
-        float dpWidth = metrics.widthPixels / metrics.density;
-        int noOfColumn = (int) dpWidth / 180;
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            DisplayMetrics metrics = this.getResources().getDisplayMetrics();
+            float dpWidth = metrics.widthPixels / metrics.density;
+            int noOfColumn = (int) dpWidth / 250;
             return new GridLayoutManager(this, noOfColumn);
         } else {
             return new LinearLayoutManager(this);
