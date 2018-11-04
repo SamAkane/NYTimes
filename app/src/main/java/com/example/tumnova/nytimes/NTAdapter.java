@@ -2,21 +2,19 @@ package com.example.tumnova.nytimes;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.tumnova.nytimes.activities.NewsDetailsActivity;
 import com.example.tumnova.nytimes.model.NewsItem;
 
-import java.util.Date;
 import java.util.List;
 
 public class NTAdapter extends RecyclerView.Adapter<NTAdapter.ViewHolder> {
@@ -24,9 +22,9 @@ public class NTAdapter extends RecyclerView.Adapter<NTAdapter.ViewHolder> {
     private final Context context;
     private final LayoutInflater inflater;
 
-    public NTAdapter(Context c, List<NewsItem> n){
-        context = c;
-        news = n;
+    public NTAdapter(Context context, List<NewsItem> newsItems){
+        this.context = context;
+        news = newsItems;
         inflater = LayoutInflater.from(context);
     }
 

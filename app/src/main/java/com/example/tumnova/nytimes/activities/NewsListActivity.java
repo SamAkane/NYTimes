@@ -2,25 +2,24 @@ package com.example.tumnova.nytimes.activities;
 
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 
 import com.example.tumnova.nytimes.DataUtils;
 import com.example.tumnova.nytimes.NTAdapter;
-import com.example.tumnova.nytimes.NTItemDecoretor;
+import com.example.tumnova.nytimes.NTItemDecorator;
 import com.example.tumnova.nytimes.R;
 
 public class NewsListActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
+    private int noOfColumn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +51,7 @@ public class NewsListActivity extends AppCompatActivity {
         recyclerView.setAdapter(new NTAdapter(this, DataUtils.generateNews()));
         recyclerView.setLayoutManager(getLayoutManager());
 
-        NTItemDecoretor itemDecorator = new NTItemDecoretor();
+        NTItemDecorator itemDecorator = new NTItemDecorator(this, R.dimen.margins_4_dp, noOfColumn);
         recyclerView.addItemDecoration(itemDecorator);
     }
 
@@ -60,7 +59,7 @@ public class NewsListActivity extends AppCompatActivity {
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             DisplayMetrics metrics = this.getResources().getDisplayMetrics();
             float dpWidth = metrics.widthPixels / metrics.density;
-            int noOfColumn = (int) dpWidth / 250;
+            noOfColumn = (int) dpWidth / 250;
             return new GridLayoutManager(this, noOfColumn);
         } else {
             return new LinearLayoutManager(this);

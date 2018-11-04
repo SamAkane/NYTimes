@@ -2,20 +2,17 @@ package com.example.tumnova.nytimes.activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.text.format.DateUtils;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.tumnova.nytimes.R;
 import com.example.tumnova.nytimes.model.NewsItem;
-
-import java.util.Objects;
 
 public class NewsDetailsActivity extends AppCompatActivity {
     private final static String NEWS_CATEGORY_KEY = "category";
