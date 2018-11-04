@@ -12,4 +12,5 @@
     <string name="no_email_apps">На вашем устройстве нет приложений для отправки электронных писем</string>
     <string name="telegram_no_installed">На вашем устройстве не установлен telegramm</string>
     <string name="disclaimer">© 2018 Татьяна Умнова</string>
+    <string name="about">Об авторе</string>
 </resources>
